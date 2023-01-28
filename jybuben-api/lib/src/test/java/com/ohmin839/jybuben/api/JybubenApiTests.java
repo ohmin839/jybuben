@@ -10,8 +10,6 @@ import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Sets;
 
 public class JybubenApiTests {
     @TestFactory
@@ -125,38 +123,16 @@ public class JybubenApiTests {
     }
 
     @TestFactory
-    Stream<DynamicTest> toHayerenWordListTests() {
+    Stream<DynamicTest> toHayerenWordsTests() {
         return Stream.of(
-            Pair.create("", Lists.<String>newArrayList())
+            Pair.create("", Lists.<String>newArrayList()),
+            Pair.create("Բարև Ձեզ։", Lists.<String>newArrayList("Բարև", "Ձեզ"))
         ).map(
             pair -> dynamicTest(
                 String.format("\"%s\" -> \"%s\"", pair.getFirst(), pair.getSecond()),
-                () -> assertEquals(pair.getSecond(), JybubenApi.toHayerenWordList(pair.getFirst()))
+                () -> assertEquals(pair.getSecond(), JybubenApi.toHayerenWords(pair.getFirst()))
             )
         );
     }
 
-    @TestFactory
-    Stream<DynamicTest> toHayerenWordSetTests() {
-        return Stream.of(
-            Pair.create("", Sets.<String>newHashSet())
-        ).map(
-            pair -> dynamicTest(
-                String.format("\"%s\" -> \"%s\"", pair.getFirst(), pair.getSecond()),
-                () -> assertEquals(pair.getSecond(), JybubenApi.toHayerenWordSet(pair.getFirst()))
-            )
-        );
-    }
-
-    @TestFactory
-    Stream<DynamicTest> toHayerenWordMapTests() {
-        return Stream.of(
-            Pair.create("", Maps.<String, Integer>newHashMap())
-        ).map(
-            pair -> dynamicTest(
-                String.format("\"%s\" -> \"%s\"", pair.getFirst(), pair.getSecond()),
-                () -> assertEquals(pair.getSecond(), JybubenApi.toHayerenWordMap(pair.getFirst()))
-            )
-        );
-    }
 }

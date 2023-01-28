@@ -1,12 +1,7 @@
 package com.ohmin839.jybuben.api;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.parboiled.Parboiled;
 import org.parboiled.parserunners.RecoveringParseRunner;
 import org.parboiled.support.ParsingResult;
@@ -14,6 +9,7 @@ import org.parboiled.support.ParsingResult;
 public class JybubenApi {
 
     static private final ConverterParser converterParser = Parboiled.createParser(ConverterParser.class);
+    static private final CollectorParser collectorParser = Parboiled.createParser(CollectorParser.class);
 
     static public String toAybuben(String text) {
         if (text.isEmpty()) {
@@ -24,18 +20,13 @@ public class JybubenApi {
         }
     }
 
-    static public List<String> toHayerenWordList(String text) {
-        // TODO
-        return new ArrayList<>();
+    static public List<String> toHayerenWords(String text) {
+        if (text.isEmpty()) {
+            return new ArrayList<>();
+        } else {
+            ParsingResult<List<String>> result = new RecoveringParseRunner<List<String>>(collectorParser.InputLine()).run(text);
+            return result.resultValue;
+        }
     }
 
-    static public Set<String> toHayerenWordSet(String text) {
-        // TODO
-        return new HashSet<>();
-    }
-
-    static public Map<String, Integer> toHayerenWordMap(String text) {
-        // TODO
-        return new HashMap<>();
-    }
 }
