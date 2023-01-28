@@ -17,7 +17,10 @@ public class JybubenApiTests {
     @TestFactory
     Stream<DynamicTest> toAybubenTests() {
         return Stream.of(
-            Pair.create("", "")
+            Pair.create("", ""),
+            Pair.create("A", "Ա"),
+            Pair.create("B", "Բ"),
+            Pair.create("AB", "ԱԲ")
         ).map(
             pair -> dynamicTest(
                 String.format("\"%s\" -> \"%s\"", pair.getFirst(), pair.getSecond()),
