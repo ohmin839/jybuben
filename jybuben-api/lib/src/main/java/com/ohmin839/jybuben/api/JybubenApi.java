@@ -28,5 +28,4 @@ public class JybubenApi {
             return result.resultValue;
         }
     }
-
 }

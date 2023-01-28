@@ -10,12 +10,11 @@ import org.parboiled.support.ValueStack;
 
 @BuildParseTree
 public class ConverterParser extends BaseParser<String> {
-
     Rule InputLine() {
         return Sequence(Letters(), EOI);
     }
     Rule Letters() {
-        return OneOrMore(Letter(), push(joinLetters(getContext().getValueStack())));
+        return Sequence(OneOrMore(Letter()), push(joinLetters(getContext().getValueStack())));
     }
     Rule Letter() {
         return FirstOf(
@@ -327,7 +326,6 @@ public class ConverterParser extends BaseParser<String> {
             Optional(String("~")),
             push(convertExclamation(match())));
     }
-
     Rule AnyChar() {
         return Sequence(ANY, push(match()));
     }
@@ -596,5 +594,4 @@ public class ConverterParser extends BaseParser<String> {
             return "\u055B";
         }
     }
-
 }

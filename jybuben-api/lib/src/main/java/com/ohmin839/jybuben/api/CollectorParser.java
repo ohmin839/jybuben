@@ -10,18 +10,14 @@ import org.parboiled.support.ValueStack;
 
 @BuildParseTree
 class CollectorParser extends BaseParser<List<String>> {
-
     Rule InputLine() {
-        return Sequence(WordOrNot(), EOI);
-    }
-    Rule WordOrNot() {
-        return OneOrMore(FirstOf(Word(), ANY));
+        return Sequence(OneOrMore(FirstOf(Word(), ANY)), EOI);
     }
     Rule Word() {
         return Sequence(OneOrMore(Alphabet()), pushList());
     }
     Rule Alphabet() {
-        return AnyOf("ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖՈաբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքօֆոև");
+        return AnyOf("ԱԲԳԴԵԶԷԸԹԺԻԼԽԾԿՀՁՂՃՄՅՆՇՈՉՊՋՌՍՎՏՐՑՒՓՔՕՖաբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքօֆև");
     }
 
     boolean pushList() {
