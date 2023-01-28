@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile
+    volumes:
+      - ./jybuben-api:/jybuben-api:rw
