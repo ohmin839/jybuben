@@ -3,7 +3,7 @@
 
 ## Conversion API
 
-`toAybuben` function converts ASCII strings into Aybuben strings.
+`toAybuben` method converts ASCII strings into Aybuben strings.
 
 ```java
 String result = JybubenApi.toAybuben("Barev Dzez:");
@@ -123,7 +123,7 @@ System.out.println(result); // Բարև Ձեզ։
 
 ## Collection API
 
-`toHayerenWords` function extracts Armenian words from texts:
+`toHayerenWords` method extracts Armenian words from texts:
 ```java
 String converted = JybubenApi.toAybuben('Barev Dzez:');
 String words = JybubenApi.toHayerenWords(converted);
