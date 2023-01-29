@@ -1,8 +1,17 @@
 version: "3.8"
 services:
-  api:
+  gradle:
     build:
       context: .
-      dockerfile: ./docker/api/Dockerfile
+      dockerfile: ./docker/gradle/Dockerfile
     volumes:
-      - ./jybuben-api:/jybuben-api:rw
+      - ./api/:/jybuben/api
+      - ./buildSrc:/jybuben/buildSrc
+      - ./cli-converter/:/jybuben/cli-converter
+      - ./cli-collector/:/jybuben/cli-collector
+      - ./gradle:/jybuben/gradle
+      - ./anthem_ascii.txt:/jybuben/anthem_ascii.txt
+      - ./gradlew:/jybuben/gradlew
+      - ./README.md:/jybuben/README.md
+      - ./settings.gradle:/jybuben/settings.gradle
+

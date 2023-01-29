@@ -3,4 +3,4 @@
 This is a work in progress.
 
 ## Components
-- [`jybuben-api`](./jybuben-api/README.md)
+- [`jybuben-api`](./api/README.md)
