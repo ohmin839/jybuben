@@ -11,7 +11,7 @@ public class App {
         new App().doMain(args);
     }
 
-    public void doMain(String[] args) throws IOException {
+    public void doMain(String... args) throws IOException {
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             reader.lines().forEach(line -> System.out.println(JybubenApi.toAybuben(line)));
         }
