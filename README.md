@@ -3,6 +3,6 @@
 This is a work in progress.
 
 ## Components
-- [`jybuben-api`](./api/README.md)
-- [`jybuben-cli-converter`](./cli-converter/README.md)
-- [`jybuben-cli-collector`](./cli-collector/README.md)
+- [`jybuben-api`](./java/jybuben-api/README.md)
+- [`jybuben-cli-converter`](./java/jybuben-cli-converter/README.md)
+- [`jybuben-cli-collector`](./java/jybuben-cli-collector/README.md)

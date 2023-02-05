@@ -5,13 +5,4 @@ services:
       context: .
       dockerfile: ./docker/gradle/Dockerfile
     volumes:
-      - ./api/:/jybuben/api
-      - ./buildSrc:/jybuben/buildSrc
-      - ./cli-converter/:/jybuben/cli-converter
-      - ./cli-collector/:/jybuben/cli-collector
-      - ./gradle:/jybuben/gradle
-      - ./anthem_ascii.txt:/jybuben/anthem_ascii.txt
-      - ./gradlew:/jybuben/gradlew
-      - ./README.md:/jybuben/README.md
-      - ./settings.gradle:/jybuben/settings.gradle
-
+      - ./java/:/home/gradle/jybuben

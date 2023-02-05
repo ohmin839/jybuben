@@ -7,14 +7,14 @@ plugins {
 }
 
 dependencies {
-    implementation project(':api')
+    implementation project(':jybuben-api')
     // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 }
 
 application {
     // Define the main class for the application.
-    mainClass = 'com.ohmin839.jybuben.cli.collector.App'
+    mainClass = 'com.ohmin839.jybuben.cli.converter.App'
 }
 
 run {
@@ -22,5 +22,5 @@ run {
 }
 
 startScripts {
-    applicationName = 'jybubencoll'
+  applicationName = 'jybubenconv'
 }

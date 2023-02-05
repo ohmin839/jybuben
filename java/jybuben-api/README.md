@@ -1,5 +1,5 @@
 # jybuben-api
-`jybuben-api` provides minimum APIs.
+`jybuben-api` provides minimum Java APIs.
 
 ## Conversion API
 
