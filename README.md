@@ -4,5 +4,6 @@ This is a work in progress.
 
 ## Components
 - [`jybuben-api`](./java/jybuben-api/README.md)
+- [`jybuben-orm`](./java/jybuben-orm/README.md)
 - [`jybuben-cli-converter`](./java/jybuben-cli-converter/README.md)
 - [`jybuben-cli-collector`](./java/jybuben-cli-collector/README.md)
