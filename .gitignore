@@ -1,6 +1,5 @@
 # vscode
 .vscode/
-.devcontainer/
 # Ignore Gradle project-specific cache directory
 .gradle
 

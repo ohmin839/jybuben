@@ -5,4 +5,4 @@ services:
       context: .
       dockerfile: ./docker/gradle/Dockerfile
     volumes:
-      - ./java/:/home/gradle/jybuben
+      - ./:/home/gradle/jybuben
