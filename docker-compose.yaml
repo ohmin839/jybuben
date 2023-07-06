@@ -5,4 +5,13 @@ services:
       context: .
       dockerfile: ./docker/gradle/Dockerfile
     volumes:
-      - ./:/home/gradle/jybuben
+      - .:/home/gradle/jybuben
+  h2:
+    image: oscarfonts/h2:2.1.214
+    environment:
+      - H2_OPTIONS=-ifNotExists
+    ports:
+      - 81
+      - 1521
+    volumes:
+      - ./data/h2:/opt/h2-data
