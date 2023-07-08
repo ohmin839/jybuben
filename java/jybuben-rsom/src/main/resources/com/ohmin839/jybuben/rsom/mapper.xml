@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ohmin839.jybuben.rsom">
+    <select id="selectAllTRawWords" resultType="com.ohmin839.jybuben.rsom.TRawWord">
+        SELECT id, val FROM app.t_raw_word ORDER BY val ASC;
+    </select>
+    <update id="mergeRawWord" parameterType="java.lang.String">
+        MERGE INTO app.t_raw_word
+        USING DUAL
+        ON val = #{val}
+        WHEN NOT MATCHED THEN
+            INSERT(val) VALUES (#{val})
+    </update>
+</mapper>
