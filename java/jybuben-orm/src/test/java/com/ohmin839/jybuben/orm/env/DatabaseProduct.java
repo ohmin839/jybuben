@@ -90,7 +90,7 @@ public enum DatabaseProduct {
             }
         },
         // Yes, this should work with 5.6, no idea why Gail named it 5.7
-        org.hibernate.dialect.MySQL57InnoDBDialect.class.getName()
+        org.hibernate.dialect.MySQL5Dialect.class.getName()
     );
 
     public DataSourceConfiguration configuration;

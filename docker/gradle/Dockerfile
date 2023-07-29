@@ -1,4 +1,4 @@
-FROM gradle:7.6.0-jdk8-focal
+FROM gradle:8.2.1-jdk17-jammy
 ARG USERNAME=gradle
 CMD ["tail", "-f", "/dev/null"]
 USER $USERNAME
