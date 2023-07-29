@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'jybuben'
-include('jybuben-api', 'jybuben-orm', 'jybuben-cli-converter', 'jybuben-cli-collector', 'jybuben-rsom')
+include('jybuben-api', 'jybuben-orm', 'jybuben-cli-converter', 'jybuben-cli-collector', 'jybuben-rsom', 'jybuben-batch')
