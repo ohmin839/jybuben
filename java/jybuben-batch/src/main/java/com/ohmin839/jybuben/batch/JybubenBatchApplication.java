@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.PlatformTransactionManager;
 
 @SpringBootApplication
-//@EnableBatchProcessing // not working with this annotation sincce 5.0
+//@EnableBatchProcessing // not working with this annotation since 5.0
 public class JybubenBatchApplication {
 	@Bean
 	public Step firstStep(JobRepository jobRepository, PlatformTransactionManager transactionManager) {
